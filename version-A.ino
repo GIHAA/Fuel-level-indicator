@@ -43,10 +43,10 @@ void loop() {
   
   digitalWrite(TRIGGER, LOW);
   duration = pulseIn(ECHO, HIGH);
-  distance = (duration/2) / 29.1;
+  distance = (duration/2) / 29.1; // final distance in cm
   
   Serial.print(distance);
   Serial.println("Centimeter:");
-  Firebase.setInt("Distance",distance);
+  //Firebase.setInt("Distance",distance); <firebase data out
   delay(1000);
 }
